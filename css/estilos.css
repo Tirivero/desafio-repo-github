@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,700;1,300&family=Montserrat:wght@300;800&family=Open+Sans:ital,wght@0,800;1,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.padreGrid {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer"
+}
+
+/*****************HEADER******************/
+header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-image: linear-gradient(to top, orange, orangered);
+    border: 2px 2px 0px 2px black solid;
+}
+
+#imagenLogo {
+    z-index: 1;
+    width: 50%;
+    height: 100%;
+    margin: 1% 1% 1% 1%;
+    border-style: dashed;
+}
+
+.padreGrid header #itemUno {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    size: 100%;
+}
+
+.padreGrid header #itemDos {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+h1 {
+    font-size: 200%;
+    color: black;
+    text-decoration: underline;
+}
+
+#logoCarrito {
+
+    width: 80px;
+    height: 80px;
+    border-radius: 200px;
+}
+
+#logoCuenta {
+    width: 80px;
+    height: 80px;
+    margin-right: 5px;
+    border-radius: 200px;
+}
+
+
+.linkLogo {
+    z-index: 1;
+    margin: 1% 1% 1% 1%;
+}
+
+/*******************NAV********************/
+
+.navProductos {
+    grid-area: nav;
+}
+
+/*LISTA NAVEGACION PRODUCTOS DESPLEGABLE*/
+
+#navegacionProductos {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
+    background-color: orange;
+    border-bottom: 2px black solid;
+}
+
+#navegacionProductos li {
+    display: inline-block;
+    background-color: orange;
+    padding: 2px;
+    border: 2px solid black;
+    position: relative;
+}
+
+#navegacionProductos ol {
+    position: absolute;
+    display: none;
+}
+
+#navegacionProductos ol li {
+    display: block;
+}
+
+#navegacionProductos li:hover ol {
+    display: block;
+}
+
+/***********************MAIN****************/
+main {
+    grid-area: main;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    width: 100%;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+h3 {
+    text-align: center;
+    font-size: large;
+}
+
+#imagenConstruccion {
+    border: 1px orange solid;
+    display: block;
+    margin-left: 30%;
+}
+
+#imagenIndex {
+    width: 100%;
+    height: 20rem;
+}
+
+
+.productosVenta {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+#productosProductos {
+    display: inline-block;
+}
+
+.productosVenta img {
+    margin: 3px;
+    width: 6cm;
+    height: 6cm;
+    border: 3px black groove;
+}
+
+#contactoyUbi {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*****************FOOTER*******************/
+
+footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: space-between;
+    background-color: orangered;
+    background-image: linear-gradient(to top, orange, orangered);
+    padding-top: 10px;
+    border-top: 2px black solid;
+}
+
+.navegacionFooter {
+    display: inline-flex;
+    gap: 8px;
+    list-style: none;
+    padding-left: 200px;
+}
+
+.iconosRedes a img {
+    width: 50px;
+    height: 50px;
+    border-radius: 200px;
+}
+
+/*************** MEDIA QUERIES ***************/
+
+
+/****VISTA TABLET ****/
+@media screen and (min-width:768px) and (max-width:1024px) {
+    .padreGrid {
+        display: grid;
+        grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "footer";
+    }
+
+    main .productosVenta {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #imagenConstruccion {
+        display: flex;
+        justify-content: center;
+    }
+
+    footer {
+        display: inline-block;
+        justify-content: center;
+        width: 100vw;
+    }
+
+    footer .iconosRedes {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/**** VISTA MÓVIL ****/
+
+@media screen and (min-width:0px) and (max-width:767px) {
+    .padreGrid {
+        display: grid;
+        grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "footer";
+    }
+
+    header {
+        display: flex;
+        width: 100vw;
+    }
+
+    .padreGrid header #itemDos a {
+        display: flex;
+        justify-items: right;
+        width: 50px;
+        height: 50px;
+    }
+
+    #imagenLogo {
+        z-index: 1;
+        width: 40%;
+        height: 80%;
+        margin: 1% 1% 1% 1%;
+        border-style: dashed;
+    }
+
+    #logoCarrito {
+        margin: 0;
+        width: 90%;
+        height: 100%;
+    }
+
+    #logoCuenta {
+        margin: 0;
+        width: 90%;
+        height: 100%;
+    }
+
+    #formularioBusqueda {
+        display: none;
+    }
+
+    h1 {
+        position: relative;
+        font-size: 20px;
+    }
+
+    h2 {
+        padding-top: 5%;
+        margin: auto;
+    }
+
+    #navegacionProductos {
+        position: absolute;
+        width: 100vw;
+    }
+
+    main {
+        width: 100vw;
+    }
+
+    #imagenIndex {
+
+        width: 100vw;
+    }
+
+    main .productosVenta {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100vw;
+    }
+
+    .productosVenta img {
+        margin: 3px;
+        width: 2cm;
+        height: 2cm;
+        border: 2px black groove;
+    }
+
+    #contactoyUbi {
+        display: block;
+        padding-left: 10%;
+    }
+
+    #formularioContactoyMapa {
+        width: 70%;
+        padding-top: 5%;
+    }
+
+    #imagenConstruccion {
+
+        display: flex;
+        justify-content: center;
+        width: 40vw;
+    }
+
+    footer {
+        display: flex;
+        width: 100vw;
+
+    }
+
+    footer .iconosRedes {
+        display: flex;
+        flex-direction: column;
+        justify-content: right;
+
+    }
+
+    footer .navegacionFooter {
+        display: inline-block;
+        flex-direction: column;
+        padding-left: 1%;
+    }
+}

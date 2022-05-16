@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="shortcut icon" href="../img/favicon.bmp" type="image/x-icon">
+</head>
+
+<body>
+    <div class="padreGrid">
+        <!------------------ HEADER ----------------------->
+        <div id="contenedorHeader">
+            <header>
+                <div class="linkLogo">
+                    <a href="../Index.html">
+                        <img id="imagenLogo" src="../img/favicon.bmp" alt="Logo negocio">
+                    </a>
+                </div>
+                <div id="itemUno">
+                    <h1>Accesorios Kurama</h1>
+                    <form id="formularioBusqueda" action="">
+                        <input type="search"></label>
+                    </form>
+                </div>
+                <div id="itemDos">
+                    <a href="../Pages/Carrito.html">
+                        <img id="logoCarrito" alt="Logo carrito" src="../img/logo-carrito.png" />
+                    </a>
+                    <a href="../Pages/Cuenta.html">
+                        <img id="logoCuenta" alt="Logo cuenta" src="../img/logo-cuenta.bmp" />
+                    </a>
+                </div>
+            </header>
+            <!------------------ NAV ----------------------->
+            <!--LISTA NAVEGACION PRODUCTOS DESPLEGABLE-->
+            <nav class="navProductos">
+                <ol id="navegacionProductos">
+                    <li><a href="../Pages/Productos.html">Celulares</a>
+                        <ol>
+                            <li><a href="../Pages/Productos.html#samsung">Samsung</a></li>
+                            <li><a href="../Pages/Productos.html#iphone">Iphone</a></li>
+                            <li><a href="../Pages/Productos.html#xiaiomi">Xiaiomi</a></li>
+                        </ol>
+                    </li>
+                    <li><a href="../Pages/Productos.html#notebooks">Notebooks</a></li>
+                    <li><a href="../Pages/Productos.html#ipad">Ipads</a></li>
+                </ol>
+            </nav>
+
+            <!--------------------- MAIN ----------------------->
+            <main>
+
+                <h2>Contactanos y Ubicanos</h2>
+                <section id="contactoyUbi">
+                    <form>
+                        <fieldset id="formularioContactoyMapa">
+                            <legend>Formulario de contacto</legend>
+                            <label for="nombre">Nombre</label>
+                            <input id="nombre" type="text" placeholder="Ingrese su nombre aqui">
+                            <br><br>
+                            <label for="apellido">Apellido</label>
+                            <input id="apellido" type="text" placeholder="Ingrese aqui su apellido">
+                            <br><br>
+                            <label for="mail">Email</label>
+                            <input id="mail" type="email" placeholder="Ingrese aqui su mail">
+                            <br><br>
+                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                            <br><br>
+                            <input type="Submit">
+                            <input type="Reset" value="Borrar todo">
+                        </fieldset>
+                    </form>
+
+                    <iframe id="formularioContactoyMapa"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26262.12513279556!2d-58.47512440211261!3d-34.63536224886597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc9801c92ef47%3A0xc93f0b1dc41d41ee!2sFlores%2C%20CABA!5e0!3m2!1ses-419!2sar!4v1650143034823!5m2!1ses-419!2sar"
+                        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                </section>
+            </main>
+
+            <!---------------FOOTER---------------->
+            <footer>
+                <!--LINKS NAVEGACION FOOTER Y REDES SOLIALES-->
+                <div>
+                    <ul class="navegacionFooter">
+                        <li><a href="Productos.html">Productos</a></li>
+                        <li><a href="Cuenta.html">Cuenta</a></li>
+                        <li><a href="Carrito.html">Carrito</a></li>
+                        <li><a href="../Index.html">Home</a></li>
+                        <li><a href="Preguntas-frecuentes.html">Preguntas frecuentes</a></li>
+                        <li><a href="Contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="iconosRedes">
+                    <a href="https://es-la.facebook.com/">
+                        <img alt="Logo face" src="../img/logo-face.bmp" />
+                    </a>
+                    <a href="https://www.instagram.com/?hl=es">
+                        <img alt="Logo insta" src="../img/logo-ig.bmp">
+                    </a>
+                    <a href="https://web.whatsapp.com/">
+                        <img alt="Logo whatsapp" src="../img/logo-whats.bmp">
+                    </a>
+                </div>
+            </footer>
+        </div>
+
+</body>
+
+</html>
