@@ -50,10 +50,22 @@ header {
     gap: 7px;
 }
 
+@keyframes texto {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
 h1 {
     font-size: 200%;
     color: black;
     text-decoration: underline;
+    animation-name: texto;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    
 }
 
 #logoCarrito {
@@ -61,6 +73,7 @@ h1 {
     width: 80px;
     height: 80px;
     border-radius: 200px;
+    
 }
 
 #logoCuenta {
@@ -70,10 +83,31 @@ h1 {
     border-radius: 200px;
 }
 
+#itemDos a{
+    transition: height 0.1s, width 0.1s;
+}
 
+#itemDos a:hover {
+    height: 90px;
+    width: 90px;
+}
+
+@keyframes animacionLogo {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+    
+}
 .linkLogo {
     z-index: 1;
     margin: 1% 1% 1% 1%;
+    animation-name: animacionLogo;
+    animation-iteration-count:initial;
+    animation-duration: 2s;
+    
 }
 
 /*******************NAV********************/
@@ -127,6 +161,8 @@ h2 {
     justify-content: center;
     margin-top: 40px;
     margin-bottom: 30px;
+    box-shadow: -20px 2px 10px;
+    opacity: 90%;
 }
 
 h3 {
